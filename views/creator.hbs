@@ -1,0 +1,21 @@
+<form method='POST' action='/albums'>
+  <fieldset>
+    <legend>Create Album</legend>
+    <label>Genre</label>
+    <select name="genre">
+      {{#genres}}
+      <option value='{{value}}'>{{title}}</option>
+      {{/genres}}
+    </select><br><br>
+    <label>Artist</label>
+    <input type="text" name="artist">
+    <br><br>
+    <label>Album</label>
+    <input type="text" name="name">
+    <br><br>
+    <input type="checkbox" name="explicit" value='true'>Contains Explicit Material not suitable for Lincoln</input>
+    <br><br>
+    <input type="submit" value="Create Album">
+      <a href='/albums'>AHHH GO BACK</a><br><br>
+  </fieldset>
+</form>

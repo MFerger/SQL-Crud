@@ -1,0 +1,12 @@
+<h2>Album selected: {{album.name}}</h2>
+<p>Genre: {{album.genre}}</p>
+<br>
+<p>Artist: {{album.artist}}</p>
+<br>
+<p>Lincoln Appropriate? {{album.explicit}}</p>
+
+<a href='/edit/{{album.id}}'>Want to edit this?</a>
+
+<form method='POST' action='/albums/{{album.id}}/delete'>
+<input type="submit" value="Delete"></input>
+</form>

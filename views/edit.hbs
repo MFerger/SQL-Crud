@@ -1,0 +1,21 @@
+<form method='POST' action='/albums/edit/{{album.id}}'>
+  <fieldset>
+    <legend>Editing Your Album</legend>
+    <label>Genre</label>
+    <select name="genre">
+      {{#genres}}
+      <option value={{value}}>{{title}}</option>
+      {{/genres}}
+    </select><br><br>
+    <label>Artist</label>
+    <input type="text" name="artist" value='{{album.artist}}'></input>
+    <br><br>
+    <label>Album</label>
+    <input type="text" name="name" value='{{album.name}}'></input>
+    <br><br>
+    <input type="checkbox" name="explicit" id='expl' value='true'>Contains Explicit Material not suitable for Lincoln</input>
+    <input type="submit" value="Edit Album">
+  </fieldset>
+    <br><br>
+  </form>
+      <a href='/albums'>AHHH GO BACK</a><br><br>
